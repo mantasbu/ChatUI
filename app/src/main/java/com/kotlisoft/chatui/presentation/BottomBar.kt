@@ -23,6 +23,7 @@ import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.unit.dp
 import com.kotlisoft.chatui.R
 import com.kotlisoft.chatui.presentation.ui.theme.LightRed
+import com.kotlisoft.chatui.presentation.ui.theme.LightRedDisabled
 
 @Composable
 fun BottomBar(
@@ -56,8 +57,10 @@ fun BottomBar(
                 keyboardOptions = KeyboardOptions(imeAction = ImeAction.Send),
                 keyboardActions = KeyboardActions(
                     onSend = {
-                        onSendMessage(message)
-                        message = ""
+                        if (message.isNotBlank()) {
+                            onSendMessage(message)
+                            message = ""
+                        }
                     },
                 )
             )
@@ -69,11 +72,13 @@ fun BottomBar(
                 modifier = Modifier
                     .size(40.dp)
                     .clip(CircleShape)
-                    .background(LightRed)
+                    .background(if (message.isBlank()) LightRedDisabled else LightRed)
                     .padding(8.dp)
                     .clickable {
-                        onSendMessage(message)
-                        message = ""
+                        if (message.isNotBlank()) {
+                            onSendMessage(message)
+                            message = ""
+                        }
                     }
             )
             Spacer(modifier = Modifier.width(16.dp))
