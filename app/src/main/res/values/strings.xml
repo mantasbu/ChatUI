@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ChatUI</string>
+    <string name="arrow_back">Arrow back</string>
+    <string name="profile_picture">Profile picture</string>
+    <string name="more">More</string>
+    <string name="message_placeholder">It\'s a muzmatch !!</string>
+    <string name="send">Send</string>
+</resources>
