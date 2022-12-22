@@ -4,7 +4,7 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListState
-import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalFocusManager
@@ -28,7 +28,12 @@ fun MessagesList(
             }
     ) {
         LazyColumn(state = listState) {
-            items(items = messages) { message ->
+            itemsIndexed(items = messages) { index, message ->
+                if (index > 0 && index < messages.size - 1 &&
+                    messages[index + 1].timestamp - message.timestamp > 3_600_000
+                ) {
+                    TimestampItem(messageTimestamp = messages[index + 1].timestamp)
+                }
                 MessageItem(
                     text = message.text,
                     sentByMe = message.sentByUser == senderName
