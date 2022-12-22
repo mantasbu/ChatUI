@@ -1,4 +1,4 @@
-package com.kotlisoft.chatui.ui.theme
+package com.kotlisoft.chatui.presentation.ui.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme
