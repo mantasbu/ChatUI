@@ -14,7 +14,7 @@
         android:theme="@style/Theme.ChatUI"
         tools:targetApi="33">
         <activity
-            android:name=".MainActivity"
+            android:name=".presentation.MainActivity"
             android:exported="true"
             android:theme="@style/Theme.ChatUI"
             android:windowSoftInputMode="adjustResize">

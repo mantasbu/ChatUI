@@ -1,9 +1,9 @@
-package com.kotlisoft.chatui
+package com.kotlisoft.chatui.presentation
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import com.kotlisoft.chatui.ui.theme.ChatUITheme
+import com.kotlisoft.chatui.presentation.ui.theme.ChatUITheme
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
