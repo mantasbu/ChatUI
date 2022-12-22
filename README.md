@@ -1,5 +1,7 @@
 # ChatUI App
 
+![My Image](ChatUI.jpg)
+
 ## Technologies Used
 * Jetpack Compose
 * Kotlin Coroutines and Flow
