@@ -1,6 +1,6 @@
 # ChatUI App
 
-![My Image](ChatUI.jpg)
+<img src="ChatUI.jpg" alt="ChatUI main screen" width="270" height="600" />
 
 ## Technologies Used
 * Jetpack Compose
